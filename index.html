@@ -1,8 +1,9 @@
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Apuração 2º turno - Flávio x Lula</title>
-<style>html,body{margin:0;height:100%;background:#0b0d12;color:#ddd;font:18px sans-serif}iframe{border:0;width:100%;height:100%;display:block}#m{position:fixed;inset:0;display:grid;place-items:center}</style></head>
+<style>html,body{margin:0;height:100%;background:#0b0d12;color:#ddd;font:18px sans-serif}[hidden]{display:none!important}iframe{border:0;width:100%;height:100%;display:block}#m{position:fixed;inset:0;display:grid;place-items:center}</style></head>
 <body><p id="m">Abrindo a apuração…</p><iframe id="f" hidden allowfullscreen></iframe><script>
 function abrir(){fetch('url.json?'+Date.now()).then(function(r){return r.json()}).then(function(j){
  var f=document.getElementById('f'); if(f.dataset.u!==j.url){f.dataset.u=j.url;f.src=j.url;} f.hidden=false;document.getElementById('m').hidden=true;
 }).catch(function(){document.getElementById('m').textContent='Apuração indisponível agora. Tente em instantes.'});}
 abrir(); setInterval(abrir,60000);
 </script></body></html>
+
