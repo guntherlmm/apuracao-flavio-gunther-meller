@@ -1,0 +1,5 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Apuração 2º turno</title>
+<style>body{background:#0b0d12;color:#ddd;font:18px sans-serif;display:grid;place-items:center;height:100vh;margin:0}</style></head>
+<body><p id="m">Abrindo a apuração…</p><script>
+fetch('url.json?'+Date.now()).then(r=>r.json()).then(j=>{location.replace(j.url)}).catch(()=>{document.getElementById('m').textContent='Apuração indisponível agora. Tente em instantes.'});
+</script></body></html>
